@@ -1,0 +1,26 @@
+{
+  "name": "cs-361-microservice",
+  "version": "1.0.0",
+  "description": "Leverages the Animechan API to return a random quote from an anime or anime character.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rngolam/cs-361-microservice.git"
+  },
+  "author": "Richard Ngo-Lam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rngolam/cs-361-microservice/issues"
+  },
+  "homepage": "https://github.com/rngolam/cs-361-microservice#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "typescript": "^4.7.4"
+  }
+}
