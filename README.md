@@ -74,12 +74,12 @@ will return
 ## UML Sequence Diagram
 ```mermaid
 sequenceDiagram
-Client->>Middleware (Microservice): GET request
+Client->>Middleware (Microservice): Client makes GET request to Microservice endpoint
 Note over Client: /anime
 Note over Client: /character
 Note over Client: query parameter: q
 
-Middleware (Microservice) ->> Animechan API: GET request
+Middleware (Microservice) ->> Animechan API: Microservice makes GET request to API endpoint
 Note over Middleware (Microservice): /anime
 Note over Middleware (Microservice): /character
 Note over Middleware (Microservice): query parameter: title or name
