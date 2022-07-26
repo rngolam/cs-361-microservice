@@ -72,3 +72,31 @@ will return
 ```
 
 ## UML Sequence Diagram
+```mermaid
+sequenceDiagram
+Client->>Middleware (Microservice): GET request
+Note over Client: /anime
+Note over Client: /character
+Note over Client: query parameter: q
+
+Middleware (Microservice) ->> Animechan API: GET request
+Note over Middleware (Microservice): /anime
+Note over Middleware (Microservice): /character
+Note over Middleware (Microservice): query parameter: title or name
+
+alt  Success
+Animechan API->>Middleware (Microservice): Successful Request
+Note left of Animechan API: 200 OK
+else Error
+Animechan API->>Middleware (Microservice): Failed Request
+Note left of Animechan API:  400 Bad request <br> 404 No related quotes found! <br> 500 Internal Server Error
+end
+alt  Success
+
+Middleware (Microservice) ->> Client: Successful Request
+Note left of Middleware (Microservice): 200 OK
+else Error
+Middleware (Microservice)->>Client: Failed Request
+Note left of Middleware (Microservice):  400 GET request error <br> 404 No related quotes found!
+end
+```
